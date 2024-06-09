@@ -1,0 +1,84 @@
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f8f8;
+}
+
+a {
+  color: #f8f8f8;
+  text-decoration: none;
+}
+
+/* *header (menu e logo) */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.5rem;
+      background-color: #818575;
+}
+
+header > a > img {
+  width: 10rem;
+}
+
+header nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header nav ul li {
+  list-style-type: none;
+  padding: 0.5rem;
+  font-weight: 600;
+}
+
+header nav ul li a {
+  text-decoration: none;
+}
+header nav ul .busca {
+  padding: 0.5rem;
+}
+
+/* *main e section 1 */
+
+main section img {
+  width: 25rem;
+  border-radius: 2rem;
+}
+
+main > section {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+main > section > div {
+  margin: 0 2rem;
+  padding: 1rem;
+}
+main > section h2 {
+  text-align: center;
+    color: #818575;
+
+}
+
+footer{
+    height: 3vh;
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f8f8f8;
+    font-size: .9rem;
+    font-weight: 450;
+    font-style: italic;
+    background-color: #818575;
+
+}
