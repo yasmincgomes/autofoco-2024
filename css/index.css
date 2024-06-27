@@ -4,7 +4,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-image: url(../pexels-cottonbro-3584948.jpg);
+  background-image: url(../img/pexels-cottonbro-3584948.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -180,10 +180,7 @@ main > section:nth-child(4) {
   align-items: center;
   background-color: #f8f8f8;
 }
-/* main > section:nth-child(4) .texto h3 {
-  margin-top: 2rem;
-  background-color: #6a6d61;
-} */
+
 
 main > section:nth-child(4) .texto {
   padding: 0;
