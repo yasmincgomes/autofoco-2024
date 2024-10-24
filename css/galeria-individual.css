@@ -1,5 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
+:root {
+  --cor-verde: #818575;
+  --cor-branca: #f8f8f8;
+  --cor-verde-transparente: #6a6d6117;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -7,8 +13,8 @@ body {
   font-family: "Nunito", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
-  
-  background-color: #f8f8f8;
+
+  background-color: var(--cor-branca);
 }
 
 
@@ -21,7 +27,7 @@ header {
   padding: 0 1.5rem;
 }
 
-header > a > img {
+header>a>img {
   width: 10rem;
 }
 
@@ -39,7 +45,7 @@ header nav ul li {
 
 header nav ul a {
   text-decoration: none;
-    color: #f8f8f8;
+  color: var(--cor-branca);
 
 }
 
@@ -47,33 +53,83 @@ header nav ul .busca {
   padding: 0.5rem;
 }
 
+/** DropDown*/
+header nav ul li.dropdown {
+  display: inline-block;
+  position: relative;
+}
+
+div.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--cor-branca);
+  min-width: 160px;
+  border-radius: 1rem;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  left: 50%;
+  /* Posiciona 50% a partir da esquerda  (centralizar em relação do dropdown-btn)*/
+  transform: translateX(-50%);
+}
+
+div.dropdown-content a {
+  color: var(--cor-verde);
+  text-align: center;
+  padding: .7rem .9rem;
+  text-decoration: none;
+  display: block;
+  box-sizing: border-box;
+  /* Inclui padding na largura */
+}
+
+div.dropdown-content a:hover {
+  background-color: var(--cor-verde-transparente);
+  width: 100%;
+  border-radius: .9rem;
+}
+
+.dropdown:active .dropdown-content,
+.dropdown:hover .dropdown-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.dropbtn {
+  cursor: pointer;
+}
+
 /* *main e section 1 */
 
-main > div{
+main>div {
   position: relative;
-  margin-top:10rem;
-   display: flex;
-   justify-content: center;
-   align-items: center;
- 
+  margin-top: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 }
-main > div h1{
-  color: #f8f8f8;
-   text-shadow: 2px 2px 4px rgba(78, 78, 78, 0.5);
+
+main>div h1 {
+  color: var(--cor-branca);
+  text-shadow: 2px 2px 4px rgba(78, 78, 78, 0.5);
   font-family: "Times New Roman", Times, serif;
   font-size: 6.5rem;
   font-style: italic;
   letter-spacing: 20px;
 }
-main section{
+
+main section {
   height: 150vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-top: 24.5rem;
-  background-color: #f8f8f8;
+  background-color: var(--cor-branca);
 }
+
 main section div {
   display: flex;
   justify-content: center;
@@ -83,7 +139,7 @@ main section div {
 main section img {
   width: 20vw;
   padding: .5rem 1rem;
-  
+
 }
 
 footer {
@@ -93,9 +149,9 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #f8f8f8;
+  color: var(--cor-branca);
   font-size: 0.9rem;
   font-weight: 450;
   font-style: italic;
-  background-color: #818575;
+  background-color: var(--cor-verde);
 }
